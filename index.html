@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Kisah Kampung — Hidupmu, Caramu</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+
+  <div class="overlay" id="startScreen">
+    <div class="big-emoji">🏡</div>
+    <h1 class="pixel">KISAH KAMPUNG</h1>
+    <div class="tag">Hidup sederhana di kampung. Caramu, ceritamu.</div>
+    <div class="field">
+      <label>Siapa namamu?</label>
+      <input id="nameInput" maxlength="14" placeholder="cth: Budi" autocomplete="off">
+    </div>
+    <div class="field">
+      <label>Pilih karaktermu</label>
+      <div class="avatars" id="avatars">
+        <div class="av sel">🧑</div><div class="av">👩</div><div class="av">👨</div>
+        <div class="av">🧕</div><div class="av">👵</div><div class="av">🧔</div>
+      </div>
+    </div>
+    <button class="start-btn pixel" id="startBtn">Mulai Hidup ▶</button>
+  </div>
+
+  <div class="overlay hidden" id="modal" style="background:#16252ecc">
+    <div class="modal-card">
+      <div class="me" id="modalEmoji">🌙</div>
+      <h2 id="modalTitle">Judul</h2>
+      <p id="modalText">Teks</p>
+      <button class="ok pixel" id="modalOk">Lanjut</button>
+    </div>
+  </div>
+
+  <header>
+    <div class="row">
+      <div class="name-block">
+        <div class="who" id="hName">—</div>
+        <div class="sub" id="hMood">Warga baru di kampung</div>
+      </div>
+      <div class="day-pill pixel" id="hDay">Hari 1</div>
+    </div>
+    <div class="time-dots" id="timeDots"></div>
+  </header>
+
+  <div class="stats">
+    <div class="stat uang">
+      <div class="lab"><span><span class="ic">💰</span> Uang</span><span class="val" id="vUang">Rp 0</span></div>
+    </div>
+    <div class="stat">
+      <div class="lab"><span><span class="ic">⚡</span> Energi</span><span class="val" id="vEnergi">100</span></div>
+      <div class="meter m-energi"><i id="bEnergi" style="width:100%"></i></div>
+    </div>
+    <div class="stat">
+      <div class="lab"><span><span class="ic">🍚</span> Kenyang</span><span class="val" id="vKenyang">100</span></div>
+      <div class="meter m-kenyang"><i id="bKenyang" style="width:100%"></i></div>
+    </div>
+    <div class="stat" style="grid-column:span 2">
+      <div class="lab"><span><span class="ic">😊</span> Senang</span><span class="val" id="vSenang">100</span></div>
+      <div class="meter m-senang"><i id="bSenang" style="width:100%"></i></div>
+    </div>
+  </div>
+
+  <div class="scene" id="scene">
+    <div class="clouds" id="clouds"></div>
+    <div class="stars" id="stars"></div>
+    <div class="label pixel" id="sceneLabel">Rumah</div>
+    <div class="place-emoji" id="placeEmoji">🛏️</div>
+    <div class="hero" id="heroEmoji">🧑</div>
+    <div class="ground" id="ground"></div>
+  </div>
+
+  <div id="log"><span class="spark">👋</span><span id="logText">Selamat datang di kampung!</span></div>
+
+  <div class="panel">
+    <div class="goal" id="goalBox">
+      <div class="gt"><span>🎯 <span id="goalLabel">Beli rumah sendiri</span></span><small id="goalProgress">0%</small></div>
+      <div class="meter"><i id="goalBar" style="width:0%"></i></div>
+    </div>
+
+    <h3 id="actTitle">Yang bisa kamu lakukan</h3>
+    <div class="btns" id="actions"></div>
+
+    <div class="divider"></div>
+    <h3>Pindah tempat</h3>
+    <div class="btns" id="travel"></div>
+
+    <div class="footer-mini">Kisah Kampung · <a id="resetLink">mulai ulang</a></div>
+  </div>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
