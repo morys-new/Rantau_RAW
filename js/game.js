@@ -191,7 +191,7 @@ function nembak(type){
 
 function tembak(){
   S.jadian = true; S.senang = 100;
-  showModal("💍", "Dia bilang IYA!", "Sari menerima cintamu. Kalian resmi pacaran. Hidup di kampung terasa lengkap. 💞 (Tapi cerita belum berhenti — lanjut hidupmu!)");
+  showModal("💍", "Dia bilang IYA!", "Sari menerima cintamu. Kalian resmi pacaran. Hidup di kampung terasa lengkap. 💞 (Tapi cerita belum berhenti, lanjut hidupmu!)");
   render();
 }
 
